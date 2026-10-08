@@ -331,7 +331,7 @@
       separator = none
     }
 
-    if num-state.unit.prefix == auto and num-state.exponent == "eng" and unit.numerator.len() > 0 {
+    if num-state.unit.prefix == auto and num-state.exponent == "eng" and unit.numerator.len() > 0 and (info.int + info.frac).trim("0") != "" {
       let first-numerator-unit-exponent = unit.numerator.first().at(1)
       if first-numerator-unit-exponent != "0.5" and not "." in first-numerator-unit-exponent {
         let unit-exponent = int(first-numerator-unit-exponent)
